@@ -6,11 +6,9 @@
 package kkdev.kksystem.plugin.radar.manager;
 
 import kkdev.kksystem.base.classes.base.PinDataTaggedObj;
-import kkdev.kksystem.base.classes.geo.PinDataGeo;
 import kkdev.kksystem.base.classes.plugins.PluginMessage;
 import kkdev.kksystem.base.classes.plugins.simple.managers.PluginManagerBase;
 import kkdev.kksystem.base.constants.PluginConsts;
-import kkdev.kksystem.base.constants.SystemConsts;
 import kkdev.kksystem.plugin.radar.KKPlugin;
 
 /**

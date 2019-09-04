@@ -5,12 +5,20 @@
  */
 package kkdev.kksystem.plugin.radar.manager.configuration;
 
+import java.util.Map;
+
 /**
  *
  * @author garikk
  */
-public class RadarCluster {
-    public String Name;
-    public RadarSensor[] Sensors;
-    public AlertRule[] AlertRules;
+public class AlertRule {
+    public enum AlertType {
+        INFORM,
+        INFORM_WARN,
+        PARKING
+    }
+    String name;
+    Integer[] sectors;
+    AlertType[] alert_type;
+    Map<Double,Integer> range_alerts;
 }

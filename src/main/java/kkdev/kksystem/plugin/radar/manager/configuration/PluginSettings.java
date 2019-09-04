@@ -22,7 +22,7 @@ public abstract class PluginSettings {
 
         SettingsManager settings = new SettingsManager(RADAR_CONF, RadarConf.class);
 
-        //   System.out.println("[LCDDisplay][CONFIG] Load configuration");
+        System.out.println("[LCDDisplay][CONFIG] Load configuration");
         MainConfiguration = (RadarConf) settings.loadConfig();
 
         if (MainConfiguration == null) {
@@ -32,7 +32,6 @@ public abstract class PluginSettings {
         }
         if (MainConfiguration == null) {
             System.out.println("[KKRDR][CONFIG] Load configuration, fatal");
-            return;
         }
 
     }
