@@ -11,14 +11,14 @@ import kkdev.kksystem.plugin.radar.manager.configuration.RadarConf.RadarSources;
  *
  * @author garikk
  */
-public class RadarSensor {
+public class RadarSensorConf {
     public Boolean Enabled;
     public String Name;
     public int K;
     public int Range;
     public String SourceId;
     public RadarSources Source;
-    public int Index;
+    public String UID;
     public int Sector;
     
 }

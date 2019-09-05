@@ -5,16 +5,22 @@
  */
 package kkdev.kksystem.plugin.radar.radar;
 
-import kkdev.kksystem.plugin.radar.manager.configuration.RadarCluster;
+import java.util.List;
+import java.util.Map;
+import kkdev.kksystem.plugin.radar.manager.configuration.RadarClusterConf;
 
 /**
  *
  * @author garikk
  */
 public class Radar {
+    private Map<Integer, ClusterProcessor> Clusters;
+    private Map<String, List<Integer>> AdapterOnClusters;
     
-    public Radar(RadarCluster conf)
+    public Radar(RadarClusterConf conf)
     {
     }
-    
+    public void ReceiveSensorData(String SensorUID, Float SensorData)
+    {
+    }
 }

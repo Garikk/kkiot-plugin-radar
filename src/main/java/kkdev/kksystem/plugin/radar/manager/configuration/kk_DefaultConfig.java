@@ -9,8 +9,6 @@ import java.util.HashMap;
 import kkdev.kksystem.base.constants.SystemConsts;
 import static kkdev.kksystem.base.constants.SystemConsts.*;
 import kkdev.kksystem.plugin.radar.manager.configuration.AlertRule.AlertType;
-import static kkdev.kksystem.plugin.radar.manager.configuration.AlertRule.AlertType.WARNING;
-
 /**
  *
  * @author blinov_is
@@ -26,12 +24,13 @@ public abstract class kk_DefaultConfig {
 
         RadarConf DefConf = new RadarConf();
 
-        RadarCluster rearRadar = new RadarCluster();
-        RadarCluster frontRadar = new RadarCluster();
-        RadarCluster sideRadar = new RadarCluster();
+        RadarClusterConf rearRadar = new RadarClusterConf();
+        RadarClusterConf frontRadar = new RadarClusterConf();
+        RadarClusterConf sideRadar = new RadarClusterConf();
 
         rearRadar.Name = "Rear park radar";
-        rearRadar.Sensors = new RadarSensor[4];
+        rearRadar.AreaId = 1;
+        rearRadar.Sensors = new RadarSensorConf[4];
         rearRadar.Sensors[0] = initDefSensor(0, 2000, 15);
         rearRadar.Sensors[1] = initDefSensor(1, 2000, 15);
         rearRadar.Sensors[2] = initDefSensor(2, 2000, 15);
@@ -54,9 +53,10 @@ public abstract class kk_DefaultConfig {
         rearRadar.AlertRules[0] = aRule;
 
         frontRadar.Name = "Front park radar";
-        frontRadar.Sensors = new RadarSensor[2];
-        frontRadar.Sensors[0] = new RadarSensor();
-        frontRadar.Sensors[1] = new RadarSensor();
+        rearRadar.AreaId = 2;
+        frontRadar.Sensors = new RadarSensorConf[2];
+        frontRadar.Sensors[0] = new RadarSensorConf();
+        frontRadar.Sensors[1] = new RadarSensorConf();
 
         frontRadar.AlertRules = new AlertRule[2];
         aRule = new AlertRule();
@@ -85,9 +85,10 @@ public abstract class kk_DefaultConfig {
         rearRadar.AlertRules[1] = aRule;
 
         sideRadar.Name = "blind spot radar";
-        sideRadar.Sensors = new RadarSensor[2];
-        sideRadar.Sensors[0] = new RadarSensor();
-        sideRadar.Sensors[1] = new RadarSensor();
+        rearRadar.AreaId = 3;
+        sideRadar.Sensors = new RadarSensorConf[2];
+        sideRadar.Sensors[0] = new RadarSensorConf();
+        sideRadar.Sensors[1] = new RadarSensorConf();
         sideRadar.AlertRules = new AlertRule[2];
         aRule = new AlertRule();
         aRule.alert_type = new AlertType[1];
@@ -111,8 +112,8 @@ public abstract class kk_DefaultConfig {
         return DefConf;
     }
 
-    private static RadarSensor initDefSensor(Integer idx, Integer range, Integer sector) {
-        RadarSensor ret = new RadarSensor();
+    private static RadarSensorConf initDefSensor(Integer idx, Integer range, Integer sector) {
+        RadarSensorConf ret = new RadarSensorConf();
         return ret;
     }
 

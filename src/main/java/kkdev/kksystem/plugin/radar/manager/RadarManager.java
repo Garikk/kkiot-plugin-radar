@@ -17,6 +17,7 @@ import kkdev.kksystem.plugin.radar.KKPlugin;
  */
 public class RadarManager extends PluginManagerBase {
     public final String RADAR_TAG="RADAR_DATA";
+    
    
     public void Init(KKPlugin BaseConnector)
     {

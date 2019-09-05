@@ -3,14 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package kkdev.kksystem.plugin.radar.manager.configuration;
+package kkdev.kksystem.plugin.radar.manager;
 
 /**
  *
  * @author garikk
  */
-public class RadarCluster {
-    public String Name;
-    public RadarSensor[] Sensors;
-    public AlertRule[] AlertRules;
+public class RadarMessage {
+    public Integer AreaId;
+    public Integer SectorId;
+    public Float Distance;
+    public Integer AlertValue;
 }

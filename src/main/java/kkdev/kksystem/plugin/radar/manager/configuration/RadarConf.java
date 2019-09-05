@@ -18,6 +18,6 @@ public class RadarConf  extends PluginConfiguration {
         RDR_SRC_EXTCONNECTOR
     }
     
-    public RadarCluster[] Clusters;
+    public RadarClusterConf[] Clusters;
     
 }
